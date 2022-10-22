@@ -14,4 +14,4 @@ Upcoming Features:
   - simple and customizable design 
 
 Upcoming Big Features:
-  - Animated grapihc design
+  - Animated graphic design
