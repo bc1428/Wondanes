@@ -1,7 +1,7 @@
 from datetime import datetime
 
 
-def stopwatch(function, request=None):
+def stopwatch(function):
     """
     Measures the time of a process
     command : stopwatch([function], [Desired time information])
@@ -11,7 +11,7 @@ def stopwatch(function, request=None):
     None: stop - start (microsecond)
     """
 
-    def inner():
+    def inner(request=None):
         start = datetime.now()
         function()
         stop = datetime.now()
@@ -23,7 +23,7 @@ def stopwatch(function, request=None):
         elif request == 100:
             return [start, stop, timedown.seconds]
         else:
-            return timedown.seconds
+            return timedown.microseconds
 
     return inner
 
@@ -47,3 +47,9 @@ def convert_time(microsecond, unit):
 def active_time(start_time):
     difference_time = datetime.now() - start_time
     return difference_time
+
+def text():
+    return print("BC1428")
+
+k = stopwatch(text)
+print(k(100))
