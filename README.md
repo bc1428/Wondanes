@@ -1,4 +1,6 @@
 # Wondanes
 Login Software
-username: admin\n
+
+username: admin
+
 password: 123456
