@@ -23,7 +23,7 @@ def stopwatch(function):
         elif request == 100:
             return [start, stop, timedown.seconds]
         else:
-            return timedown.microseconds
+            return timedown.seconds
 
     return inner
 
@@ -47,9 +47,3 @@ def convert_time(microsecond, unit):
 def active_time(start_time):
     difference_time = datetime.now() - start_time
     return difference_time
-
-def text():
-    return print("BC1428")
-
-k = stopwatch(text)
-print(k(100))
